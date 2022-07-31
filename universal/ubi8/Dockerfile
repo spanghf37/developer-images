@@ -197,12 +197,10 @@ RUN set -euf -o pipefail && \
     gpgcheck=1\n\
     repo_gpgcheck=1\n\
     gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg\
-    " > /etc/yum.repos.d/kubernetes.repo
-
-dnf install -y kubectl
-curl -sSL -o ~/.kubectl_aliases https://raw.githubusercontent.com/ahmetb/kubectl-alias/master/.kubectl_aliases
-echo '[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases' >> /home/user/.bashrc
-EOF
+    " > /etc/yum.repos.d/kubernetes.repo && \
+    dnf install -y kubectl && \
+    curl -sSL -o ~/.kubectl_aliases https://raw.githubusercontent.com/ahmetb/kubectl-alias/master/.kubectl_aliases && \
+    echo '[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases' >> /home/user/.bashrc
 
 ## shellcheck
 RUN <<EOF
