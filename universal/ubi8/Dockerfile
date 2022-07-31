@@ -226,7 +226,7 @@ RUN set -euf -o pipefail && \
     KREW_TGZ="krew-${KREW_ARCH}.tar.gz" && \
     KREW_TGZ_URL="https://github.com/kubernetes-sigs/krew/releases/download/v${KREW_VERSION}/${KREW_TGZ}" && \
     curl -sSLO "${KREW_TGZ_URL}" && \
-    curl -sSLO "${KREW_TGZ_URL}.sha256"
+    curl -sSLO "${KREW_TGZ_URL}.sha256" && \
     # File ${KREW_TGZ_URL}.sha256 has invalid format to be checked with sha256sum.
     # It needs to create a valid one.
     echo "$(cat ${KREW_TGZ}.sha256)  ${KREW_TGZ}" > "${KREW_TGZ}.sha256" && \
