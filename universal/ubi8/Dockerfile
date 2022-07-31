@@ -374,7 +374,7 @@ RUN set -euf -o pipefail && \
     cd "${TEMP_DIR}" && \
     E2FSPROGS_VERSION="1.46.5" && \
     E2FSPROGS_TGZ="e2fsprogs-${E2FSPROGS_VERSION}.tar.gz" && \
-    E2FSPROGS_TGZ_URL="https://mirrors.edge.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v${E2FSPROGS_VERSION}/${E2FSPROGS_TGZ}" && \ && \
+    E2FSPROGS_TGZ_URL="https://mirrors.edge.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v${E2FSPROGS_VERSION}/${E2FSPROGS_TGZ}" && \
     E2FSPROGS_CHEKSUMS_URL="https://mirrors.edge.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v${E2FSPROGS_VERSION}/sha256sums.asc" && \
     curl -sSLO "${E2FSPROGS_TGZ_URL}" && \
     curl -sSLO "${E2FSPROGS_CHEKSUMS_URL}" && \
