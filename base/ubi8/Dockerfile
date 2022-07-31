@@ -60,7 +60,7 @@ RUN set -euf -o pipefail && \
     TEMP_DIR="$(mktemp -d)" && \
     cd "${TEMP_DIR}" && \
     BAT_VERSION="0.18.3" && \
-    BAT_ARCH="x86_64-unknown-linux-musl" && \ && \
+    BAT_ARCH="x86_64-unknown-linux-musl" && \
     BAT_TGZ="bat-v${BAT_VERSION}-${BAT_ARCH}.tar.gz" && \
     BAT_TGZ_URL="https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/${BAT_TGZ}" && \
     curl -sSLO "${BAT_TGZ_URL}" && \
