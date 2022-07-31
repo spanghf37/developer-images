@@ -65,7 +65,7 @@ RUN set -euf -o pipefail && \
     BAT_TGZ_URL="https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/${BAT_TGZ}" && \
     curl -sSLO "${BAT_TGZ_URL}" && \
     tar -zxvf "${BAT_TGZ}" && \
-    mv "bat-v${BAT_VERSION}-${BAT_ARCH}"/bat /usr/local/bin/ && \ && \
+    mv "bat-v${BAT_VERSION}-${BAT_ARCH}"/bat /usr/local/bin/ && \
     cd - && \
     rm -rf "${TEMP_DIR}"
 
